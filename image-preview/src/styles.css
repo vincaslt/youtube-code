@@ -1,33 +1,32 @@
-.imagePreview {
+.image-preview {
   position: fixed;
+  background-color: #333333;
   inset: 0;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #333333;
 }
 
-.topBar {
+.top-bar {
   display: flex;
   justify-content: flex-end;
   padding: 20px;
 }
 
-.bottomBar {
+.bottom-bar {
   display: flex;
   justify-content: center;
   padding: 20px;
 }
 
-.imageContainer {
-  flex: 1;
-  overflow: auto;
-  position: relative;
+.preview-container {
   display: flex;
   flex-direction: column;
+  flex: 1;
+  overflow: auto;
 }
 
-.image {
+.preview-image {
   margin: auto;
 }
 
@@ -36,18 +35,17 @@
   border: none;
   min-width: 32px;
   min-height: 32px;
-  line-height: 20px;
   color: white;
   border-radius: 99px;
+  font-family: monospace;
+  font-size: 15px;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  font-family: 'Roboto Mono', monospace;
-  font-size: 14px;
 }
 
-.controlWithPadding {
+.control-with-padding {
   padding: 0 12px;
 }
 

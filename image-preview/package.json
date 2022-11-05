@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "normalize.css": "8.0.1",
+    "normalize.css": "^8.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -17,9 +17,8 @@
     "@types/react": "^18.0.22",
     "@types/react-dom": "^18.0.7",
     "@vitejs/plugin-react": "^2.2.0",
-    "eslint": "8.26.0",
-    "eslint-config-react-app": "7.0.1",
-    "prettier": "2.7.1",
+    "eslint": "^8.26.0",
+    "eslint-config-react-app": "^7.0.1",
     "typescript": "^4.6.4",
     "vite": "^3.2.0"
   }

@@ -1,11 +1,11 @@
-import { ChangeEvent, useState } from 'react';
-import ImagePreview from './ImagePreview';
-import { fileToDataString } from './utils';
+import { ChangeEventHandler, useState } from "react";
+import ImagePreview from "./ImagePreview";
+import { fileToDataString } from "./utils";
 
 function App() {
   const [previewImageSrc, setPreviewImageSrc] = useState<string>();
 
-  const handleChangeFile = async (e: ChangeEvent<HTMLInputElement>) => {
+  const handleChangeFile: ChangeEventHandler<HTMLInputElement> = async (e) => {
     const file = e.target.files?.[0];
 
     if (!file) {
@@ -19,17 +19,17 @@ function App() {
     }
   };
 
-  const handleClosePreview = () => {
+  const handleCloseClick = () => {
     setPreviewImageSrc(undefined);
   };
 
   return (
-    <div>
+    <>
       <input type="file" onChange={handleChangeFile} accept="image/*" />
       {previewImageSrc && (
-        <ImagePreview imageSrc={previewImageSrc} onClose={handleClosePreview} />
+        <ImagePreview imageSrc={previewImageSrc} onClose={handleCloseClick} />
       )}
-    </div>
+    </>
   );
 }
 
